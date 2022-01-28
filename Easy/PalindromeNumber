@@ -1,0 +1,15 @@
+//Given an integer x, return true if x is palindrome integer.An integer is a palindrome when it reads the same backward as forward.
+
+class Solution {
+    public boolean isPalindrome(int x) {
+		 // convert input into an array
+         char[] nums = String.valueOf(x).toCharArray();
+         int start = 0;
+         int end = nums.length-1;
+         while(start < end) { //loop through
+             if(nums[start] != nums[end]) return false; // if first!=last then cannot be palindrome, therefore false
+             start++; end--;  //incrrement start, decerement end and repeat.
+         }
+        return true;
+    }
+    }
